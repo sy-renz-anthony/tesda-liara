@@ -211,7 +211,7 @@ function App() {
                     type="text"
                     name="letterInformingTesdaRemarks"
                     value={letterInformingTesda.remarks}
-                    className="w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-30 sm:w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                     onChange={ 
                       (e) =>{setLetterInformingTesda(prevData=>({
                       ...prevData,
@@ -243,7 +243,7 @@ function App() {
                     type="text"
                     name="tesdaOPCO01F20Remarks"
                     value={tesdaOPCO01F20.remarks}
-                    className="w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-30 sm:w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                     onChange={ 
                       (e) =>{setTesdaOPCO01F20(prevData=>({
                       ...prevData,
@@ -275,7 +275,7 @@ function App() {
                     type="text"
                     name="trainingCertificateOnTrainingMethodologiesRemarks"
                     value={trainingCertificateOnTrainingMethodologies.remarks}
-                    className="w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-30 sm:w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                     onChange={ 
                       (e) =>{setTrainingCertificateOnTrainingMethodologies(prevData=>({
                       ...prevData,
@@ -307,7 +307,7 @@ function App() {
                     type="text"
                     name="certificateOfTrainingRemarks"
                     value={certificateOfTraining.remarks}
-                    className="w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-30 sm:w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                     onChange={ 
                       (e) =>{setCertificateOfTraining(prevData=>({
                       ...prevData,
@@ -339,7 +339,7 @@ function App() {
                     type="text"
                     name="contractEmploymentRemarks"
                     value={contractEmployment.remarks}
-                    className="w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-30 sm:w-40 md:w-30 h-10 bg-white rounded-xl px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                     onChange={ 
                       (e) =>{setContractEmployment(prevData=>({
                       ...prevData,
@@ -365,7 +365,7 @@ function App() {
       <div className="relative w-full h-50 bg-black shadow flex flex-col text-white">
         
       <div className="w-full h-auto flex justify-end mt-10">
-        <p className="text-md">Visit us on our socials:</p>
+        <p className="text-xs md:text-md">Visit us on our socials:</p>
         <div className="flex flex-row gap-7 mx-10">
           <FaFacebookSquare className="w-8 h-8" />
           <FaTiktok className="w-8 h-8" />

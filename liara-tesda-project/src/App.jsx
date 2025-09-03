@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import logo from "./assets/TESDA-emblem-blue.png";
+import headingLogo from "./assets/TESDA-emblem-white.png";
 import pic1 from "./assets/pic1.png";
 import  {MdEmail, MdCall} from "react-icons/md";
 import {FaYoutube, FaFacebookSquare, FaTiktok} from "react-icons/fa";
@@ -59,7 +60,7 @@ function App() {
   return (
     <div className="background absolute top-0 left-0 w-full min-h-screen bg-[#030826]">
       <div className="relative top-0 left-0 w-full h-20 bg-white py-2 flex flex-row items-center">
-        <img src={logo} className="w-auto h-15 mx-2 md:mx-20" />
+        <img src={headingLogo} className="w-auto h-15 mx-2 md:mx-20" />
         <div className="w-full">
           <h1 className="text-xl md:text-2xl text-gray-600 font-bold">Liara's TESDA Project</h1>
         </div>
@@ -224,7 +225,7 @@ function App() {
               </div>
 
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
-                <label className="w-full text-white text-md font-bold mr-5" htmlFor="tesdaOPCO01F20Remarks">TESDA-OP-CO-01-F20- Copy of the National Certificate (NC). Trainer's Methodology (TM) and National TVET Trainer's Certificate (NTTC), Level I or II of the new trainer/s for WTR programs</label>
+                <label className="w-full text-white text-md font-bold mr-5" htmlFor="tesdaOPCO01F20Remarks">TESDA-OP-CO-01-F20- Copy of the National Certificate (NC) &gt; Trainer's Methodology (TM) &gt; National TVET Trainer's Certificate (NTTC) &gt; Level I or II of the new trainer/s for WTR programs</label>
                 <div className="w-full flex flex-row">
                   <div className="w-full flex justify-center items-center">
                     <h1 className="text-orange-400 block md:hidden text-lg font-bold mr-5">Compliant?</h1>
@@ -256,7 +257,7 @@ function App() {
               </div>
               
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
-                <label className="w-full text-white text-md font-bold mr-5" htmlFor="trainingCertificateOnTrainingMethodologiesRemarks">For <b>NTR</b> programs, copy of the Training Certificate on Trainer's Methodology (TM) I or other training methodology certificates</label>
+                <label className="w-full text-white text-md font-bold mr-5" htmlFor="trainingCertificateOnTrainingMethodologiesRemarks">For <b>NTR</b> programs, copy of the Training Certificate on Trainer's Methodology (TM) I or it's equivalent</label>
                 <div className="w-full flex flex-row">
                   <div className="w-full flex justify-center items-center">
                     <h1 className="text-orange-400 block md:hidden text-lg font-bold mr-5">Compliant?</h1>
@@ -320,7 +321,7 @@ function App() {
               </div>
 
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
-                <label className="w-full text-white text-md font-bold mr-5" htmlFor="contractEmploymentRemarks">Certified true copy of notarized contract employment</label>
+                <label className="w-full text-white text-md font-bold mr-5" htmlFor="contractEmploymentRemarks">Certified true copy of notarized Contract of Employment</label>
                 <div className="w-full flex flex-row">
                   <div className="w-full flex justify-center items-center">
                     <h1 className="text-orange-400 block md:hidden text-lg font-bold mr-5">Compliant?</h1>

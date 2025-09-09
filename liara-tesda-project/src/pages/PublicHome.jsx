@@ -64,7 +64,7 @@ function PublicHome() {
         </div>
         <div className="w-full flex flex-col lg:flex-row items-center justify-end text-sm text-orange-600 text-xs md:text-sm">
           <a href="tel:+630354229481" className="flex flex-row hover:text-green-600"><MdCall className="w-5 h-5 mr-2" /><p className="mr-7">(035) 255-1578</p></a>
-          <a href="mailto:tesdaptc.dumaguete@gmail.com" className="flex flex-row hover:text-green-600"><MdEmail className="w-5 h-5 mr-2" /><p className="mr-5">tesdaptc.dumaguete@gmail.com</p></a>
+          <a href="mailto:region7.negrosoriental@tesda.gov.ph" className="flex flex-row hover:text-green-600"><MdEmail className="w-5 h-5 mr-2" /><p className="mr-5">region7.negrosoriental@tesda.gov.ph</p></a>
         </div>
       </div>
 

@@ -189,7 +189,7 @@ function PublicHome() {
                 <div className="w-55"> </div>
               </div>
 
-
+              <hr className="mx-5 text-blue-900"/>
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
                 <label className="w-full text-white text-md font-bold mr-5" htmlFor="letterInformingTesdaRemarks">Letter informing TESDA on the change/additional trainer/s: </label>
                 <div className="w-full flex flex-row">
@@ -229,6 +229,7 @@ function PublicHome() {
                   />
                 </div>
               </div>
+              <hr className="mx-5 text-blue-900"/>
 
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
                 <label className="w-full text-white text-md font-bold mr-5" htmlFor="tesdaOPCO01F20Remarks">
@@ -275,7 +276,7 @@ function PublicHome() {
                   />
                 </div>
               </div>
-              
+              <hr className="mx-5 text-blue-900"/>
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
                 <label className="w-full text-white text-md font-bold mr-5" htmlFor="trainingCertificateOnTrainingMethodologiesRemarks">For <b>NTR</b> programs, copy of the Training Certificate on Trainer's Methodology (TM) I or it's equivalent</label>
                 <div className="w-full flex flex-row">
@@ -315,7 +316,7 @@ function PublicHome() {
                   />
                 </div>
               </div>
-
+            <hr className="mx-5 text-blue-900"/>
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
                 <label className="w-full text-white text-md font-bold mr-5" htmlFor="certificateOfTrainingRemarks">Certificate/s of Training relevant to registered programs/s; and</label>
                 <div className="w-full flex flex-row">
@@ -355,7 +356,7 @@ function PublicHome() {
                   />
                 </div>
               </div>
-
+            <hr className="mx-5 text-blue-900"/>
               <div className="flex flex-col md:flex-row px-5 pt-2 pb-2 justify-center items-center">
                 <label className="w-full text-white text-md font-bold mr-5" htmlFor="contractEmploymentRemarks">Certified true copy of notarized Contract of Employment</label>
                 <div className="w-full flex flex-row">
@@ -395,7 +396,7 @@ function PublicHome() {
                   />
                 </div>
               </div>
-
+            <hr className="mx-5 text-blue-900"/>
               <div className="flex items-center justify-center w-full mx-10 mt-5 mb-10">
                   <button
                     className="w-50 bg-green-600 text-white py-2 rounded-xl"

@@ -18,7 +18,7 @@ export default function StaffLogin() {
       const savedToken=localStorage.getItem('token');
         if(savedToken){
           try{
-            const response = await axiosInstance.get("/staff/validate-my-token", {}, {withCredentials: true});
+            const response = await axiosInstance.get("/staff/validate-my-token",{}, {withCredentials: true});
             if(response.data.success){
                 console.log("token is still valid!");
                 navigate('/home');

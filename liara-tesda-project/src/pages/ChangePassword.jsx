@@ -1,0 +1,106 @@
+import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import axiosInstance from '../axiosConfig';
+import { toast } from 'react-toastify';
+
+import NavBar from '../components/NavBar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import LogoutModal from "../components/LogoutConfirmModal";
+import Modal from '../components/PasswordConfirmModal';
+
+const AddAccount = () => {
+  const [isLogoutModalVisible, setIsLogoutModalVisible] = useState(false);
+  const logoutEventHandler=()=>{
+    setIsLogoutModalVisible(true);
+  }
+
+  
+  const navigate = useNavigate();
+
+  const [newPassword, setNewPassword]  = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+
+
+  const handleSubmit= async(e) =>{
+    if(!newPassword || newPassword.length < 10){
+            toast.error("Invalid new password!");
+    }else if(!confirmNewPassword){
+      toast.error("Please confirm new password!");
+    }else if(newPassword !== confirmNewPassword){
+      toast.error("Passwords mismatched! Please confirm new password again!");
+    }
+    
+    try {
+        const response = await axiosInstance.post("/staff/change-password", {"password": newPassword, "confirmPassword":confirmNewPassword }, {withCredentials: true});
+        if(!response.data.success){
+            toast.error(response.data.message);
+        }else{
+            toast.success(response.data.message);
+            navigate("/my-account");
+        }
+
+    } catch (err) {
+      console.error("Login error:", err.message);
+    }
+  }
+
+  return (
+    <div className="flex flex-col w-auto min-w-screen w-fit min-h-screen bg-gray-300">
+        <div className="flex flex-row w-full h-auto min-h-140 m-0 p-0">
+            <NavBar logoutEventHandler={logoutEventHandler}/>
+            <div className="flex flex-col w-fit lg:w-full h-auto">
+                <Header pageName="My Account"/>
+                <div className="w-auto h-auto my-10 mx-3 md:mx-10 bg-white shadow round-2xl">
+{/* -----------------------------------------------------------------------------------------------*/}
+                    <div className="flex flex-col w-full h-fit px-5 py-5">
+                        <h1 className='text-xl font-bold my-5'>Change Password</h1>
+                        <hr />
+                        <form action={handleSubmit} className="p-8 w-full" >
+                            <div className="flex flex-col md:flex-row mx-auto w-full h-auto gap-3 md:gap-5 md:items-center py-3">
+                            <label className="w-45 text-gray-600 mb-1" htmlFor="newPassword">
+                            New Password
+                            </label>
+                            <input
+                            id="newPassword"
+                            type="password"
+                            className="w-80 md:w-100 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
+                            required
+                            /></div>
+
+                            <div className="flex flex-col md:flex-row mx-auto w-full h-auto gap-3 md:gap-5 md:items-center py-3">
+                            <label className="text-gray-600 mb-1 w-45" htmlFor="newPassword">
+                            Confirm New Password
+                            </label>
+                            <input
+                            id="confirmNewPassword"
+                            type="password"
+                            className="w-80 md:w-100 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            value={confirmNewPassword}
+                            onChange={(e) => setConfirmNewPassword(e.target.value)}
+                            required
+                            /></div>
+                        
+                        <div className="flex items-center justify-center w-full h-auto pt-10">
+                            <button
+                            type="submit"
+                            className="w-50 bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-200"
+                            >
+                            submit
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+{/* -----------------------------------------------------------------------------------------------*/}
+                </div>
+            </div>
+        </div>
+        <Footer />
+        <LogoutModal isOpen={isLogoutModalVisible} onClose={()=>{setIsLogoutModalVisible(false)}}/>
+    </div>
+  )
+}
+
+export default AddAccount

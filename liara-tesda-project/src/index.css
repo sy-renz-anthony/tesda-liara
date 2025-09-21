@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@keyframes scroll-up {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes neonBlink {
+  0%, 100% {
+    color: #ff00ff;
+    text-shadow: 0 0 2px #ff00ff,
+                 0 0 4px #ff00ff,
+                 0 0 8px #ff00ff;
+  }
+  25% {
+    color: #00ffff;
+    text-shadow: 0 0 2px #00ffff,
+                 0 0 4px #00ffff,
+                 0 0 8px #00ffff;
+  }
+  50% {
+    color: #39ff14;
+    text-shadow: 0 0 2px #39ff14,
+                 0 0 4px #39ff14,
+                 0 0 8px #39ff14;
+  }
+  75% {
+    color: #ffff00;
+    text-shadow: 0 0 2px #ffff00,
+                 0 0 4px #ffff00,
+                 0 0 8px #ffff00;
+  }
+}
+
+.neon-text {
+  animation: neonBlink 2s infinite alternate;
+}
+
+    .table-general {
+        @apply bg-white border border-gray-200 rounded-lg my-5 text-sm md:text-lg w-auto mx-5 text-center;
+    }
+
+    .tablehead-general {
+        @apply bg-amber-100;
+    }
+
+    .tableheadentry-general {
+        @apply px-4 py-2 text-left font-medium text-gray-700;
+    }
+
+    .tablerow-general {
+        @apply relative w-full border-t border-gray-200 hover:bg-gray-50;
+    }
+
+    .tableentry-general {
+        @apply px-4 py-2 text-gray-800;
+    }

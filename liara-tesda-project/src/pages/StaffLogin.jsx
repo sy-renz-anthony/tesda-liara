@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import pic from "../assets/TESDA-emblem-white.png";
 import background from "../assets/pic1.png";
@@ -13,27 +13,6 @@ export default function StaffLogin() {
   
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    const validateToken=async()=>{
-      const savedToken=localStorage.getItem('token');
-        if(savedToken){
-          try{
-            const response = await axiosInstance.get("/staff/validate-my-token",{}, {withCredentials: true});
-            if(response.data.success){
-                console.log("token is still valid!");
-                navigate('/home');
-            }
-          }catch(error){
-            console.error("Token validation error:", error.message);
-          }
-          
-        }
-    
-    }
-    return validateToken;
-  }, []);
-
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
